@@ -1,0 +1,23 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@syncfusion/ej2-circulargauge": "^26.2.10",
+    "@syncfusion/ej2-maps": "^27.1.50",
+    "@syncfusion/ej2-vue-circulargauge": "^26.2.10",
+    "@syncfusion/ej2-vue-heatmap": "^24.2.6",
+    "@syncfusion/ej2-vue-maps": "^27.1.50",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.1.0"
+  }
+}
