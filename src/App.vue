@@ -24,17 +24,17 @@ const markerSettings = [
 	const zoomSettings= {
         enable: true
     };
-let Source = '';
-let Destination = '';
+let source = '';
+let destination = '';
 
 const initMap = () => {
   const directionsService = new google.maps.DirectionsService();
   
   const onButtonClick = () => {
-    Source = document.getElementById('input').value.toLowerCase();
-    Destination = document.getElementById('output').value.toLowerCase();
+    source = document.getElementById('input').value.toLowerCase();
+    destination = document.getElementById('output').value.toLowerCase();
     
-    if (Source && Destination) {
+    if (source != '' && source != null && destination != '' && destination != null) {
       calculateAndDisplayRoute(directionsService);
     }
   };
@@ -44,8 +44,8 @@ const initMap = () => {
 
 const calculateAndDisplayRoute = (directionsService) => {
   directionsService.route({
-    origin: { query: Source },
-    destination: { query: Destination },
+    origin: { query: source },
+    destination: { query: destination },
     travelMode: google.maps.TravelMode.DRIVING,
   }).then((response) => {
     const mapInstance = document.getElementById('container').ej2_instances[0];
